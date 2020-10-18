@@ -1,0 +1,22 @@
+﻿@model List<WeatherForecast>
+@{
+    ViewData["Title"] = "Weather";
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">Weather</h1>
+</div>
+
+<br />
+<table class="table table-striped">
+    @foreach (var weather in Model)
+    {
+        <tr>
+            <td>@weather.Date</td>
+            <td>@weather.Summary</td>
+            <td>@weather.TemperatureC</td>
+            <td>@weather.TemperatureF</td>
+        </tr>
+    }
+</table>
